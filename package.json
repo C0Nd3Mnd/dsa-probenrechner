@@ -1,0 +1,33 @@
+{
+  "name": "dsa-probenrechner",
+  "version": "0.1.0",
+  "description": "Probenrechner für DSA5.",
+  "scripts": {
+    "start": "parcel serve src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/C0Nd3Mnd/dsa-probenrechner.git"
+  },
+  "keywords": [
+    "dsa",
+    "dsa5"
+  ],
+  "author": "C0Nd3Mnd",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/C0Nd3Mnd/dsa-probenrechner/issues"
+  },
+  "homepage": "https://github.com/C0Nd3Mnd/dsa-probenrechner#readme",
+  "dependencies": {
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@c0nd3mnd/eslint-config": "^1.0.1",
+    "@parcel/transformer-vue": "^2.0.0-beta.2",
+    "eslint": "^7.27.0",
+    "parcel": "^2.0.0-beta.2",
+    "typescript": "^4.2.4"
+  }
+}
