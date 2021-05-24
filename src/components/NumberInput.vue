@@ -11,8 +11,8 @@
       @keydown.page-up="virtualModel += 5"
       @keydown.arrow-down="--virtualModel"
       @keydown.page-down="virtualModel -= 5"
-      @keyup.arrow-left="focusPrevious"
-      @keyup.arrow-right="focusNext"
+      @keydown.arrow-left="focusPrevious"
+      @keydown.arrow-right="focusNext"
     />
   </label>
 </template>
