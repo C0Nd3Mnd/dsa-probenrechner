@@ -4,7 +4,7 @@
   "description": "Probenrechner für DSA5.",
   "scripts": {
     "start": "parcel serve src/index.html",
-    "build": "parcel build src/index.html",
+    "build": "parcel build src/index.html --public-url=https://c0nd3mnd.github.io/dsa-probenrechner/",
     "push-gh-pages": "push-dir --dir=dist --branch=gh-pages --cleanup --verbose"
   },
   "repository": {
