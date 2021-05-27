@@ -17,8 +17,10 @@
   </label>
 </template>
 
-<script type="text/javascript">
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     modelValue: {
       type: Number,
@@ -42,39 +44,63 @@ export default {
   },
   computed: {
     virtualModel: {
-      get() {
+      get(): number {
         return this.modelValue
       },
-      set(value) {
-        value = Math.floor(+value)
+      set(value: string) {
+        let numberValue = Math.floor(+value)
 
-        if (value > this.max) {
-          value = this.max
-        } else if (value < this.min) {
-          value = this.min
+        if (numberValue > this.max) {
+          numberValue = this.max
+        } else if (numberValue < this.min) {
+          numberValue = this.min
         }
 
-        this.$emit('update:modelValue', +value)
+        this.$emit('update:modelValue', numberValue)
       }
     }
   },
   methods: {
-    focusPrevious($event) {
-      if (!$event?.target?.parentNode?.previousElementSibling?.childNodes[1]) {
+    focusPrevious($event: KeyboardEvent) {
+      if (!$event?.target) {
+        return false
+      }
+
+      const target = $event.target as Element
+
+      if (!target.parentNode) {
+        return false
+      }
+
+      const parentNode = target.parentNode as Element
+
+      if (!parentNode.previousElementSibling?.childNodes[1]) {
         return
       }
 
-      $event.target.parentNode.previousElementSibling.childNodes[1].focus()
+      (parentNode.previousElementSibling.childNodes[1] as HTMLElement).focus()
     },
-    focusNext($event) {
-      if (!$event?.target?.parentNode?.nextElementSibling?.childNodes[1]) {
+    focusNext($event: KeyboardEvent) {
+      if (!$event?.target) {
+        return false
+      }
+
+      const target = $event.target as Element
+
+      if (!target.parentNode) {
+        return false
+      }
+
+      const parentNode = target.parentNode as Element
+
+      if (!parentNode.nextElementSibling?.childNodes[1]) {
         return
       }
 
-      $event.target.parentNode.nextElementSibling.childNodes[1].focus()
+      (parentNode.nextElementSibling.childNodes[1] as HTMLElement).focus()
     }
   }
-}
+})
 </script>
 
 <style type="text/css">
