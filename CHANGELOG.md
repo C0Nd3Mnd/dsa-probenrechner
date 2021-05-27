@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 (2021-05-27)
+
+- Wechsel zur Vue CLI (resultiert unter anderem in einem kleineren Bundle)
+- Wechsel zu TypeScript
+- Favicon hinzugefügt
+
 ## 0.2.0 (2021-05-24)
 
 - Felder wechseln bei `keydown` statt `keyup` (UX Verbesserung)

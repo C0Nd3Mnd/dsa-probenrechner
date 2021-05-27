@@ -4,8 +4,10 @@
   </td>
 </template>
 
-<script type="text/javascript">
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     value: {
       type: Number,
@@ -13,7 +15,7 @@ export default {
     }
   },
   computed: {
-    valueClass() {
+    valueClass(): string {
       if (this.value >= 0.99275) {
         return 'result-column--perfect'
       }
@@ -24,11 +26,11 @@ export default {
 
       return `result-column--${Math.floor(this.value * 10) * 10}`
     },
-    prettyValue() {
+    prettyValue(): string {
       return (this.value * 100).toFixed(2)
     }
   }
-}
+})
 </script>
 
 <style type="text/css">

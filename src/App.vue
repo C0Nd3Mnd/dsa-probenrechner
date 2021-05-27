@@ -52,13 +52,14 @@
   </div>
 </template>
 
-<script type="text/javascript">
-import { probability } from './probability.js'
+<script lang="ts">
+import { defineComponent } from 'vue'
+import { probability } from './probability'
 import ResultColumn from './components/ResultColumn.vue'
 import NumberInput from './components/NumberInput.vue'
 import { version } from '../package.json'
 
-export default {
+export default defineComponent({
   components: {
     ResultColumn,
     NumberInput
@@ -98,16 +99,16 @@ export default {
     ]
   }),
   methods: {
-    calc(mod, ql) {
+    calc(mod: number, ql: number): number {
       return probability(+this.property1, +this.property2, +this.property3, +this.skillValue, mod, ql)
     }
   },
   mounted() {
     this.$nextTick(() => {
-      this.$refs.firstInput.$el.focus()
+      (this.$refs.firstInput as { $el: HTMLElement }).$el.focus()
     })
   }
-}
+})
 </script>
 
 <style type="text/css">
