@@ -1,6 +1,5 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import './default.css'
 
-const app = createApp(App)
-
-app.mount('body')
+createApp(App).mount('body')
