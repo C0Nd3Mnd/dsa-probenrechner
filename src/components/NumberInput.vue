@@ -44,9 +44,21 @@ export default defineComponent({
   },
   computed: {
     virtualModel: {
+      /**
+       * Gets the model value.
+       *
+       * @returns Model value.
+       */
       get(): number {
         return this.modelValue
       },
+      /**
+       * Emits an event to update the model value to the new value. The input
+       * value is converted to an integer first and then kept within the
+       * constraints of the `min` and `max` properties.
+       *
+       * @param value - New value.
+       */
       set(value: string) {
         let numberValue = Math.floor(+value)
 
@@ -61,15 +73,20 @@ export default defineComponent({
     }
   },
   methods: {
+    /**
+     * Focuses the previous input element.
+     *
+     * @param $event - Keybaord event of the originating input.
+     */
     focusPrevious($event: KeyboardEvent) {
       if (!$event?.target) {
-        return false
+        return
       }
 
       const target = $event.target as Element
 
       if (!target.parentNode) {
-        return false
+        return
       }
 
       const parentNode = target.parentNode as Element
@@ -78,17 +95,22 @@ export default defineComponent({
         return
       }
 
-      (parentNode.previousElementSibling.childNodes[1] as HTMLElement).focus()
+      ;(parentNode.previousElementSibling.childNodes[1] as HTMLElement).focus()
     },
+    /**
+     * Focuses the next input element.
+     *
+     * @param $event - Keyboard event of the originating input.
+     */
     focusNext($event: KeyboardEvent) {
       if (!$event?.target) {
-        return false
+        return
       }
 
       const target = $event.target as Element
 
       if (!target.parentNode) {
-        return false
+        return
       }
 
       const parentNode = target.parentNode as Element
@@ -97,7 +119,7 @@ export default defineComponent({
         return
       }
 
-      (parentNode.nextElementSibling.childNodes[1] as HTMLElement).focus()
+      ;(parentNode.nextElementSibling.childNodes[1] as HTMLElement).focus()
     }
   }
 })
@@ -129,6 +151,6 @@ export default defineComponent({
   display: block;
 }
 .number-input__input:focus {
-  border: 3px solid #2196F3;
+  border: 3px solid #2196f3;
 }
 </style>

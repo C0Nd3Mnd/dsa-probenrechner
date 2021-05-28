@@ -1,5 +1,5 @@
 <template>
-  <td :class="'result-column ' + valueClass">
+  <td :class="['result-column', valueClass]">
     {{ prettyValue }}
   </td>
 </template>
@@ -15,6 +15,12 @@ export default defineComponent({
     }
   },
   computed: {
+    /**
+     * Generates a class name that adds a background color to the <td> based on
+     * the percentage value.
+     *
+     * @returns Class name.
+     */
     valueClass(): string {
       if (this.value >= 0.99275) {
         return 'result-column--perfect'
@@ -26,6 +32,12 @@ export default defineComponent({
 
       return `result-column--${Math.floor(this.value * 10) * 10}`
     },
+    /**
+     * Formats a raw percentage value to a formatted string. For example,
+     * `0.45114` gets converted to `'45.11'`.
+     *
+     * @returns Formatted percentage string.
+     */
     prettyValue(): string {
       return (this.value * 100).toFixed(2)
     }
@@ -42,46 +54,46 @@ export default defineComponent({
 }
 
 .result-column--impossible {
-  color:  #fff;
+  color: #fff;
   background-color: #888;
 }
 .result-column--0 {
   color: #fff;
-  background-color: #F44336;
+  background-color: #f44336;
 }
 .result-column--10 {
   color: #fff;
-  background-color: #F66437;
+  background-color: #f66437;
 }
 .result-column--20 {
   color: #fff;
-  background-color: #F88638;
+  background-color: #f88638;
 }
 .result-column--30 {
-  background-color: #FAA739;
+  background-color: #faa739;
 }
 .result-column--40 {
-  background-color: #FCC93A;
+  background-color: #fcc93a;
 }
 .result-column--50 {
-  background-color: #FFEB3B;
+  background-color: #ffeb3b;
 }
 .result-column--60 {
-  background-color: #D2DC40;
+  background-color: #d2dc40;
 }
 .result-column--70 {
-  background-color: #A5CD45;
+  background-color: #a5cd45;
 }
 .result-column--80 {
   color: #fff;
-  background-color: #78BE4A;
+  background-color: #78be4a;
 }
 .result-column--90 {
   color: #fff;
-  background-color: #4CAF50;
+  background-color: #4caf50;
 }
 .result-column--perfect {
   color: #fff;
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 </style>
