@@ -102,33 +102,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style type="text/css">
-.number-input__wrapper {
-  border: 1px solid #000;
-  width: 140px;
-  display: inline-block;
-  margin: 0 8px;
-}
-.number-input__label {
-  width: 100%;
-  display: block;
-  padding: 2px 8px;
-  white-space: nowrap;
-  overflow: hidden;
-}
-.number-input__input {
-  width: 100%;
-  height: 80px;
-  text-align: center;
-  font-size: 60px;
-  margin: 0;
-  appearance: none;
-  border: none;
-  display: block;
-  padding: 0;
-}
-.number-input__input:focus {
-  border: 3px solid #2196f3;
-}
-</style>

@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.5.0 (2021-05-29)
+
+- Dark Mode (systemabhängig)
+- Hintergrundbild
+- Zeile Mod. 0 wird in der Tabelle wieder extra groß dargestellt
+
 ## 0.4.0 (2021-05-29)
 
 - Design vollständig überarbeitet (ist jetzt responsive)

@@ -28,7 +28,11 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="mod in 21" :key="mod">
+          <tr
+            v-for="mod in 21"
+            :key="mod"
+            :class="mod === 11 ? 'table__row--large' : ''"
+          >
             <th style="text-align: center">{{ mod - 11 }}</th>
             <result-column
               v-for="ql in 6"
@@ -59,6 +63,10 @@
         von Hanno Müller-Kalthoff // CC-BY 3.0
       </p>
       <p>
+        Hintergrundbild von
+        <a href="https://unsplash.com/@jplenio" target="_blank">@jplenio</a>
+      </p>
+      <p>
         Dieses Tool ist unter der
         <a
           href="https://github.com/C0Nd3Mnd/dsa-probenrechner/blob/main/LICENSE"
@@ -66,7 +74,7 @@
         >
           MIT-Lizenz
         </a>
-        lizensiert.
+        lizenziert.
         <a href="https://github.com/C0Nd3Mnd/dsa-probenrechner" target="_blank">
           Quellcode auf GitHub
         </a>
@@ -130,11 +138,3 @@ export default defineComponent({
   }
 })
 </script>
-
-<style type="text/css">
-.description-column {
-  writing-mode: vertical-rl;
-  text-orientation: mixed;
-  text-align: right;
-}
-</style>
