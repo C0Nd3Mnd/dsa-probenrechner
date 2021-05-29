@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.4.0
+## 0.4.0 (2021-05-29)
 
 - Design vollständig überarbeitet (ist jetzt responsive)
 - Unterstützung für Mobilgeräte und Touch (Buttons hinzugefügt)
