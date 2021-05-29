@@ -1,20 +1,48 @@
 <template>
-  <label class="number-input__wrapper">
-    <span class="number-input__label">{{ label }}</span>
-    <input
-      v-model="virtualModel"
-      class="number-input__input"
-      :min="min"
-      :max="max"
-      readonly
-      @keydown.arrow-up="++virtualModel"
-      @keydown.page-up="virtualModel += 5"
-      @keydown.arrow-down="--virtualModel"
-      @keydown.page-down="virtualModel -= 5"
-      @keydown.arrow-left="focusPrevious"
-      @keydown.arrow-right="focusNext"
-    />
-  </label>
+  <div class="row">
+    <div class="col-12">
+      <button
+        tabindex="-1"
+        class="btn btn--block btn--large"
+        :disabled="virtualModel === max"
+        @click="++virtualModel"
+      >
+        <font-awesome-icon icon="plus" />
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <input
+        v-model="virtualModel"
+        type="text"
+        class="number-input__input"
+        :min="min"
+        :max="max"
+        @keydown.arrow-up="++virtualModel"
+        @keydown.page-up="virtualModel += 5"
+        @keydown.arrow-down="--virtualModel"
+        @keydown.page-down="virtualModel -= 5"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 center">
+      <span class="number-input__label">{{ label }}</span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <button
+        tabindex="-1"
+        class="btn btn--block btn--large"
+        :disabled="virtualModel === min"
+        @click="--virtualModel"
+      >
+        -
+      </button>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -71,56 +99,6 @@ export default defineComponent({
         this.$emit('update:modelValue', numberValue)
       }
     }
-  },
-  methods: {
-    /**
-     * Focuses the previous input element.
-     *
-     * @param $event - Keybaord event of the originating input.
-     */
-    focusPrevious($event: KeyboardEvent) {
-      if (!$event?.target) {
-        return
-      }
-
-      const target = $event.target as Element
-
-      if (!target.parentNode) {
-        return
-      }
-
-      const parentNode = target.parentNode as Element
-
-      if (!parentNode.previousElementSibling?.childNodes[1]) {
-        return
-      }
-
-      ;(parentNode.previousElementSibling.childNodes[1] as HTMLElement).focus()
-    },
-    /**
-     * Focuses the next input element.
-     *
-     * @param $event - Keyboard event of the originating input.
-     */
-    focusNext($event: KeyboardEvent) {
-      if (!$event?.target) {
-        return
-      }
-
-      const target = $event.target as Element
-
-      if (!target.parentNode) {
-        return
-      }
-
-      const parentNode = target.parentNode as Element
-
-      if (!parentNode.nextElementSibling?.childNodes[1]) {
-        return
-      }
-
-      ;(parentNode.nextElementSibling.childNodes[1] as HTMLElement).focus()
-    }
   }
 })
 </script>
@@ -134,21 +112,21 @@ export default defineComponent({
 }
 .number-input__label {
   width: 100%;
-  text-align: center;
   display: block;
   padding: 2px 8px;
+  white-space: nowrap;
+  overflow: hidden;
 }
 .number-input__input {
-  width: 80px;
+  width: 100%;
   height: 80px;
   text-align: center;
   font-size: 60px;
   margin: 0;
   appearance: none;
-  border: 1px solid #000;
-  margin: 8px;
-  margin: 4px auto;
+  border: none;
   display: block;
+  padding: 0;
 }
 .number-input__input:focus {
   border: 3px solid #2196f3;

@@ -3,7 +3,11 @@
 }
 
 :root {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 kbd {
@@ -14,4 +18,69 @@ kbd {
   line-height: 24px;
   display: inline-block;
   padding: 0 4px;
+}
+
+.center {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.btn {
+  appearance: none;
+  background: #2196f3;
+  color: #fff;
+  border-radius: 4px;
+  border: none;
+  font-size: 1em;
+  line-height: 2em;
+  display: inline-block;
+  touch-action: manipulation;
+  padding: 0 4px;
+  user-select: none;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+}
+
+.btn:hover:not([disabled]) {
+  background-color: #1976d2;
+}
+
+.btn:active:not([disabled]) {
+  background-color: #0d47a1;
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.btn--large {
+  font-size: 1.5em;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+table > thead > tr > th {
+  border-bottom: 2px solid #E0E0E0;
+  line-height: 2em;
+}
+
+table > tbody > tr > th {
+  font-weight: bold;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+table > tbody > tr > td {
+  border-bottom: 1px solid #E0E0E0;
+}
+
+table > tbody > tr:last-child > th, table > tbody > tr:last-child > td {
+  border-bottom: none;
 }

@@ -47,7 +47,7 @@ export default defineComponent({
 
 <style type="text/css">
 .result-column {
-  width: 48px;
+  /*width: 48px;*/
   font-family: monospace;
   font-weight: bold;
   text-align: right;
@@ -55,7 +55,7 @@ export default defineComponent({
 
 .result-column--impossible {
   color: #fff;
-  background-color: #888;
+  background-color: #b0bec5;
 }
 .result-column--0 {
   color: #fff;

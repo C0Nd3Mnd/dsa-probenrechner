@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0
+
+- Design vollständig überarbeitet (ist jetzt responsive)
+- Unterstützung für Mobilgeräte und Touch (Buttons hinzugefügt)
+- Modifikator-Verschiebung entfernt
+- Eingabefelder können auch direkt verwendet werden
+
 ## 0.3.0 (2021-05-27)
 
 - Wechsel zur Vue CLI (resultiert unter anderem in einem kleineren Bundle)
