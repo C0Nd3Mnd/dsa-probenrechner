@@ -4875,7 +4875,6 @@ __metadata:
     core-js: ^3.6.5
     eslint: ^7.27.0
     eslint-plugin-vue: ^7.9.0
-    push-dir: ^0.4.1
     sass: ^1.34.0
     sass-loader: ^10.2.0
     typescript: ~4.1.5
@@ -9902,17 +9901,6 @@ fsevents@~2.3.1:
   version: 2.1.1
   resolution: "punycode@npm:2.1.1"
   checksum: 0202dc191cb35bfd88870ac99a1e824b03486d4cee20b543ef337a6dee8d8b11017da32a3e4c40b69b19976e982c030b62bd72bba42884acb691bc5ef91354c8
-  languageName: node
-  linkType: hard
-
-"push-dir@npm:^0.4.1":
-  version: 0.4.1
-  resolution: "push-dir@npm:0.4.1"
-  dependencies:
-    minimist: ^1.2.0
-  bin:
-    push-dir: bin/push-dir.js
-  checksum: 26f8088a06d2e1d7e2d3db195a958cba759fa92b26ebfdc7caa6ddf262e3d229256ff0c82bc84d01431a4f4cc25bf68d3b72b83bc01134a181cc2a4e74d3bc14
   languageName: node
   linkType: hard
 
