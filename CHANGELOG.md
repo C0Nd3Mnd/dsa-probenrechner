@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.5.1 (2021-06-12)
+
+- Abhängigkeiten aktualisiert
+
 ## 0.5.0 (2021-05-29)
 
 - Dark Mode (systemabhängig)
