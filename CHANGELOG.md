@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.6.0 (WIP)
+
+- Refactoring nach [Vite](https://vitejs.dev) mit `npm`
+- ESLint entfernt
+
 ## 0.5.1 (2021-06-12)
 
 - Abhängigkeiten aktualisiert

@@ -1,11 +1,10 @@
 .DS_Store
 node_modules
 /dist
-
+/dist-ssr
 
 # local env files
-.env.local
-.env.*.local
+*.local
 
 # Log files
 npm-debug.log*
@@ -22,12 +21,3 @@ pnpm-debug.log*
 *.sln
 *.sw?
 *.sublime-workspace
-
-# Yarn (with Zero-Installs)
-.yarn/*
-!.yarn/cache
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/sdks
-!.yarn/versions

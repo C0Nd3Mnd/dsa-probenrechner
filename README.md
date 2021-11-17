@@ -5,12 +5,11 @@ Probenrechner für Das Schwarze Auge 5.
 ## Development
 
 ```
-yarn
-yarn serve
+npm run dev
 ```
 
 ## Build
 
 ```
-yarn build
+npm run build
 ```
