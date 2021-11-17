@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.1 (2021-11-17)
+
+- Fix wegen GitHub Pages Basepath
+
 ## 0.6.0 (2021-11-17)
 
 - Refactoring nach [Vite](https://vitejs.dev) mit `npm`

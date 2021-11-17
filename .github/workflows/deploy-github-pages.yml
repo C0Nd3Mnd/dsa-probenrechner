@@ -23,7 +23,7 @@ jobs:
       name: Build
       run: |
         npm ci
-        npm run build
+        npm run build-gh
     -
       name: Deploy to GitHub Pages
       if: success()

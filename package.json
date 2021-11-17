@@ -1,10 +1,11 @@
 {
   "name": "dsa-probenrechner",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "private": true,
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
+    "build-gh": "npm run build -- --base=/dsa-probenrechner/",
     "serve": "vite preview"
   },
   "repository": {
