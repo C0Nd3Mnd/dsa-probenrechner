@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.6.2 (2022-02-08)
+
+- Abhängigkeiten aktualisiert
+
 ## 0.6.1 (2021-11-17)
 
 - Fix wegen GitHub Pages Basepath
