@@ -1,6 +1,12 @@
 # Changelog
 
-## 0.6.2 (2022-02-08)
+## 0.6.3 (2022-02-08)
+
+- Font Awesome Kompatibilitätsproblem behoben
+
+## :no_entry: 0.6.2 (2022-02-08)
+
+_Defektes Release._
 
 - Abhängigkeiten aktualisiert
 
